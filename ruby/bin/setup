@@ -3,6 +3,17 @@ set -euo pipefail
 IFS=$'\n\t'
 set -vx
 
-bundle install --binstubs=.bundle/bin
+export BUNDLE_PATH="${BUNDLE_PATH:-../_bundle_gems}"
 
-# Do any other automated setup that you need to do here
+bundle install \
+  --gemfile=.overcommit/Gemfile \
+  --binstubs=bin \
+  &&
+bundle install \
+  --gemfile=Gemfile \
+  --binstubs=.bundle/bin \
+  &&
+bundle cache \
+  --all \
+  &&
+true
