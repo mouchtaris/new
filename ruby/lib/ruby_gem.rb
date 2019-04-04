@@ -2,6 +2,10 @@
 # dd0xddi###    Hit le enters, if you dare . . . (㇏(•̀ᵥᵥ•́)ノ)#:@"
 #%s/^\s\+\(\(NAME\|AUTHORS\|SUMMARY\|HOMEPAGE\|SOURCE_CODE_URI\|CHANGELOG_URI\|DESCRIPTION\) = \)\?DEFAULT_\2/  /g | %s/\s\+$//g
 #
+
+#
+# This module has a :reek:TooManyConstants
+#
 module RubyGem
   VERSION = '0.1.0'.freeze
 
