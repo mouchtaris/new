@@ -1,18 +1,8 @@
 AllCops:
-  TargetRubyVersion: 2.6.1
-
-Style/FrozenStringLiteralComment:
   Exclude:
-    - lib/ruby_gem.rb
-
-Style/AsciiComments:
-  Exclude:
-    - lib/ruby_gem.rb
-
-Layout/LeadingCommentSpace:
-  Exclude:
-    - lib/ruby_gem.rb
-
-Metrics/LineLength:
-  Exclude:
-    - lib/ruby_gem.rb
+    - 'vendor/**/*'
+Layout/MultilineMethodCallIndentation: { EnforcedStyle: indented }
+Metrics/BlockLength: { Exclude: ['spec/**/*.rb'] }
+Naming/UncommunicativeMethodParamName: { AllowedNames: [] }
+Style/AccessModifierDeclarations: { EnforcedStyle: inline }
+Style/Documentation: { Enabled: False }
